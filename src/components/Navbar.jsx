@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <Stack direction="row" justifyContent='space-between' sx={{ gap: { sm: '123px', xs: '40px' }, mt: { sm: '32px', xs: '20px' }, justifyContent:'none'}} px="20px">
     <Link to="/">
-      <img src={fitLogo} alt="logo" style={{  height: '100px', margin: '0px 20px' }} />
+      <img src={fitLogo} alt="logo" style={{ height: '100px', margin: '0px 20px' }} />
     </Link>
     <Stack
       direction="row"
