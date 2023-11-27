@@ -1,8 +1,17 @@
 import React from 'react'
+import { Box } from '@mui/system';
+import HomeBanner from '../components/HomeBanner';
+import SearchExercises from '../components/SearchExercises'
+import Exercises from '../components/Exercises';
+
 
 function Home() {
   return (
-    <div>Home</div>
+    <Box>
+      <HomeBanner/>
+      <SearchExercises/>
+      <Exercises/>
+    </Box>
   )
 }
 

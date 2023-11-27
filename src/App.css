@@ -8,3 +8,13 @@ body {
     margin: 0px;
     box-sizing: border-box;
 }
+
+.banner-img {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    width: 700px;
+    height: 900px;
+    margin-top: -180px;
+    border-radius: 70% 10% 10% 70%;
+}

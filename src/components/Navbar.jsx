@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import fitLogo from '../assets/imgs/logo.png'
-import theme from '../theme';
 
 const Navbar = () => {
   return (
     <Stack direction="row" justifyContent='space-between' sx={{ gap: { sm: '123px', xs: '40px' }, mt: { sm: '32px', xs: '20px' }, justifyContent:'none'}} px="20px">
     <Link to="/">
-      <img src={fitLogo} alt="logo" style={{ width: '48px', height: '48px', margin: '0px 20px' }} />
+      <img src={fitLogo} alt="logo" style={{  height: '100px', margin: '0px 20px' }} />
     </Link>
     <Stack
       direction="row"
@@ -17,7 +16,7 @@ const Navbar = () => {
       fontSize="24px"
       alignItems="flex-end"
     >
-      <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
+      <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: `3px solid #c60000` }}>Home</Link>
       <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a>
     </Stack>
   </Stack>
