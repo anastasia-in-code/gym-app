@@ -24,6 +24,16 @@ body {
     border: 1px solid #c60000 !important;
 }
 
+.bodyPart-card {
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+}
+
+.exercise-card:hover,
+.bodyPart-card:hover {
+    transform: scale(1.1, 1.1);
+}
+
 @media screen and (max-width:1200px) {
     .banner-img {
         display: none;
