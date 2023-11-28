@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Typography, Stack } from '@mui/material'
 
+import { exercisesRequestOptions, fetchExercises } from '../utils/fetchExercises'
+
+
 const BodyPart = ({ item, bodyPart, setBodyPart }) => {
+
     return (
         <Stack
-            onClick={()=>{
+            onClick={() => {
                 setBodyPart(item)
-                window.scrollTo({top:1800, left:100, behavior:'smooth'})
+                window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' })
             }}
             className='bodyPart-card'
             type='buttton'
@@ -16,8 +20,8 @@ const BodyPart = ({ item, bodyPart, setBodyPart }) => {
                 borderTop: bodyPart === item ? '4px solid #c60000' : '',
                 backgroundColor: '#fff',
                 borderBottomLeftRadius: '20px',
-                width: {xs:'140px', lg: '280px'},
-                height: {xs:'135px', lg: '270px'},
+                width: { xs: '140px', lg: '280px' },
+                height: { xs: '135px', lg: '270px' },
                 cursor: 'pointer',
                 gap: '47px'
             }}>

@@ -5,33 +5,31 @@ import { exercisesRequestOptions, fetchExercises } from '../utils/fetchExercises
 import ExerciseCard from './ExerciseCard';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
-  console.log(exercises)
-
   const [currentPage, setCurrentPage] = useState(1)
 
+  //pagination calculations
   const exercisePerPage = 9
   const indexOfLastExercise = currentPage * exercisePerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisePerPage;
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise)
 
-useEffect(() => {
-  const exercisesToShow = async () => {
-    let exercisesToShow = [];
-    if(bodyPart === 'all') {
-      exercisesToShow = await fetchExercises('https://exercisedb.p.rapidapi.com/exercises?limit=100', exercisesRequestOptions)
-    } else {
-      exercisesToShow = await fetchExercises(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exercisesRequestOptions)
+  useEffect(() => {
+    const exercisesToShow = async () => {
+      let exercisesToShow = [];
+      if (bodyPart === 'all') {
+        exercisesToShow = await fetchExercises('https://exercisedb.p.rapidapi.com/exercises?limit=100', exercisesRequestOptions)
+      } else {
+        exercisesToShow = await fetchExercises(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exercisesRequestOptions)
+      }
+      setExercises(exercisesToShow)
     }
-    setExercises(exercisesToShow)
-  }
-  exercisesToShow()
-}, [bodyPart])
+    exercisesToShow()
+  }, [bodyPart])
 
   const handlePageChange = (e, value) => {
     setCurrentPage(value)
     window.scrollTo({ top: 1600, behavior: 'smooth' })
   }
-
 
   return (
     <Box id='exercises'
@@ -52,7 +50,6 @@ useEffect(() => {
             page={currentPage} onChange={handlePageChange} size='large' />
         }
       </Stack>
-
     </Box>
   )
 }
