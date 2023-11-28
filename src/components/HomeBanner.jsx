@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Stack, Button } from '@mui/material'
+import { Box, Typography, Button } from '@mui/material'
 import bannerImg from '../assets/imgs/banner.jpg'
 
 const HomeBanner = () => {
@@ -20,7 +20,7 @@ const HomeBanner = () => {
                 Elevate Your Strength Every Rep.
             </Typography>
             <Button variant='contained' color='error' sx={{ backgroundColor: 'primeRed', padding: '10px' }}>Checkout Exercises</Button>
-            <img className='banner-img' src={bannerImg} />
+            <img className='banner-img' alt='banner' src={bannerImg} />
             <Typography fontWeight={600} color='primeRed' fontSize={200}
                 sx={{
                     opacity: 0.1,
