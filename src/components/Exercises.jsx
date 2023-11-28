@@ -18,7 +18,7 @@ useEffect(() => {
   const exercisesToShow = async () => {
     let exercisesToShow = [];
     if(bodyPart === 'all') {
-      exercisesToShow = await fetchExercises('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exercisesRequestOptions)
+      exercisesToShow = await fetchExercises('https://exercisedb.p.rapidapi.com/exercises?limit=100', exercisesRequestOptions)
     } else {
       exercisesToShow = await fetchExercises(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exercisesRequestOptions)
     }
@@ -39,7 +39,7 @@ useEffect(() => {
       mt='50px'
       p='20px'>
       <Typography variant='3h' mb='46px'>
-        Results
+        Try these:
       </Typography>
       <Stack direction="row" flexWrap='wrap' justifyContent='center'
         sx={{ gap: { lg: '110px', xs: '50px' } }}>
