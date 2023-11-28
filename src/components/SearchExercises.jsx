@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { Box, Typography, Stack, Button, TextField } from '@mui/material'
 
 import {exercisesRequestOptions, fetchExercises} from '../utils/fetchExercises'
-import HorizontalScrollBar from './HoriontalScrollBar'
+import HorizontalScrollBar from './HorizontalScrollBar'
 
 
 const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
@@ -70,8 +70,8 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
         className='search-btn'>Search</Button>
 
       </Box>
-      <Box sx={{position: 'relative', width:'100%', p:'20px'}}>
-        <HorizontalScrollBar bodyPart={bodyPart} setBodyPart={setBodyPart} data={bodyParts} />
+      <Box sx={{position: 'relative', width:'100%', p:'20'}}>
+        <HorizontalScrollBar bodyPart={bodyPart} setBodyPart={setBodyPart} data={bodyParts} isBodyParts/>
       </Box>
     </Stack>
   )
