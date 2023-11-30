@@ -21,7 +21,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
   const handleChange =(e) => setSearch(e.target.value.toLowerCase())
 
   const handleSearchClick = async( ) => {
-    console.log(exercisesRequestOptions)
+  
     if(search) {
       let data = await fetchExercises('https://exercisedb.p.rapidapi.com/exercises?limit=100', exercisesRequestOptions)
       let targetExercises = data.filter(exercise => exercise.name.includes(search) ||
@@ -29,6 +29,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
       exercise.equipment.includes(search) ||
       exercise.target.includes(search)
       )
+      console.log(targetExercises)
       setSearch('')
       setExercises(targetExercises)
     }
