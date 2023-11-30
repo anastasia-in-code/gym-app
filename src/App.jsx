@@ -6,9 +6,6 @@ import { Box } from '@mui/system';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme'
 
-
-
-
 //pages
 import ExerciseDetails from './pages/ExerciseDetails';
 import Home from './pages/Home';
